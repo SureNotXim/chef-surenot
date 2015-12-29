@@ -11,3 +11,6 @@ include_recipe 'user::data_bag'
 
 # provision ssh
 include_recipe 'openssh'
+
+# provision docker
+# include_recipe 'docker'
