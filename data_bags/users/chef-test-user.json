@@ -1,10 +1,10 @@
 {
-    "id": "chef-test-user",
+    "id": "chef",
     "password": "qwerty",
     "groups": [
         "sudo"
     ],
     "ssh_keys": [
-        "your_public_ssh_key"
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkzhzHWHQhKGTTU2rghNEsknXaTZOcOjJSI9KmxTB6FcqfrmOS2WUYDsiNFdirG/vmIMiBPWD7Ag5pmedWcqvVrAM4u9bQGr/A7kjogAO53viXrfzFRxJF5XQOd1x9cxiY5Y2Qy1kdMjCaV44UN6KZSa5c4SxDY8See9C9j7a07FO+LTIwVkZlPa/EjlbULI0AiGsnjVeO9FoseiQVzAobwuGMFE/HpwYEpjs1y0xWHDvazFqELNMeKImIbwwxvtHazdSKotDT2dHXBpxcsrkxjpgEJfoPSiQYrUQm+8j5aWEZvaF7usjSVmr/rX/A3Jxrq2ulj++V4FIZLy/kBlSf surenot@MacBook-Air-de-Maxime.local"
     ]
 }
