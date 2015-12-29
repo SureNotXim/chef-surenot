@@ -1,0 +1,11 @@
+DEPENDENCIES
+  openssh
+  user
+
+GRAPH
+  compat_resource (12.5.26)
+  iptables (2.0.1)
+    compat_resource (>= 0.0.0)
+  openssh (1.5.2)
+    iptables (>= 0.0.0)
+  user (0.4.2)

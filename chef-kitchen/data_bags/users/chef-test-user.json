@@ -1,0 +1,10 @@
+{
+    "id": "chef-test-user",
+    "password": "qwerty",
+    "groups": [
+        "sudo"
+    ],
+    "ssh_keys": [
+        "your_public_ssh_key"
+    ]
+}
