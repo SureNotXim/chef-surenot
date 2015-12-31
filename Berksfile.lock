@@ -1,5 +1,6 @@
 DEPENDENCIES
   openssh
+  sudo
   user
 
 GRAPH
@@ -8,4 +9,5 @@ GRAPH
     compat_resource (>= 0.0.0)
   openssh (1.5.2)
     iptables (>= 0.0.0)
+  sudo (2.7.2)
   user (0.4.2)

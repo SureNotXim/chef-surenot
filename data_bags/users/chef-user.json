@@ -1,0 +1,11 @@
+{
+  "id": "chef-user",
+  "password": "$1$0gPQXyBz$3y68g/qNhxVMhTw5KnYZM1",
+  "groups": [
+    "sudo"
+  ],
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkzhzHWHQhKGTTU2rghNEsknXaTZOcOjJSI9KmxTB6FcqfrmOS2WUYDsiNFdirG/vmIMiBPWD7Ag5pmedWcqvVrAM4u9bQGr/A7kjogAO53viXrfzFRxJF5XQOd1x9cxiY5Y2Qy1kdMjCaV44UN6KZSa5c4SxDY8See9C9j7a07FO+LTIwVkZlPa/EjlbULI0AiGsnjVeO9FoseiQVzAobwuGMFE/HpwYEpjs1y0xWHDvazFqELNMeKImIbwwxvtHazdSKotDT2dHXBpxcsrkxjpgEJfoPSiQYrUQm+8j5aWEZvaF7usjSVmr/rX/A3Jxrq2ulj++V4FIZLy/kBlSf surenot@MacBook-Air-de-Maxime.local",
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDvz/OuZtNpizFBjZmRR3twmfQGWnJrcLDkcQwJR73XgLBIBKH0hwyM/Vc1f3esUoLMa2p0ARzP9MphvZHzSa6Rryfx0xg27zJipZljUjQVSSszM0MaF+mL8FGLaeCDkjTq826Z4iDYI0GxlbCB+1j9Edp19i2bz9R64LWOUlyVHk1ocTFZKnWV5ZMcytm98igdzPPFIX+Acl3u+xYpxrS/VRCZa/+gUaZe9QuuhlJkwsLs/rok4BG9T4MsgJsgXeYobTrMKDXiFTTUW8zzCk2Z/jsR+E4KZLfKH6SxyeJKuHOVBu3aeqi+dGiKgmXllnJP4dUFFcZ9fHfv6YJof/Yv"
+  ]
+}
