@@ -1,10 +1,13 @@
 DEPENDENCIES
+  docker
   openssh
   sudo
   user
 
 GRAPH
   compat_resource (12.5.26)
+  docker (2.4.0)
+    compat_resource (>= 12.5.23)
   iptables (2.0.1)
     compat_resource (>= 0.0.0)
   openssh (1.5.2)
