@@ -37,15 +37,14 @@ end
 docker_image 'dperson/transmission' do
   tag 'latest'
   action :pull
-  notifies :redeploy, 'docker_container[transmission-server]'
+  notifies :redeploy, 'docker_container[docker-transmission]'
 end
 
-# Run Transmission container on port 9091
-docker_container 'transmission-server' do
+docker_container 'docker-transmission' do
   repo 'dperson/transmission'
   tag 'latest'
   port '9091:9091'
-  host_name 'ns334133.ip-178-32-220.eu'
+  host_name 'docker-transmission'
   domain_name 'transmission.surenot.ml'
   binds [ '/etc/transmission-daemon/:/var/lib/transmission-daemon/.config/transmission-daemon/' ]
 end
@@ -72,15 +71,15 @@ end
 docker_image 'nginx' do
   tag 'latest'
   action :pull
-  notifies :redeploy, 'docker_container[my_nginx]'
+  notifies :redeploy, 'docker_container[docker-nginx]'
 end
 
-docker_container 'my_nginx' do
+docker_container 'docker-nginx' do
   repo 'nginx'
   tag 'latest'
   port '80:80'
-  host_name 'ns334133.ip-178-32-220.eu'
+  host_name 'docker-nginx'
   domain_name 'surenot.ml'
   binds [ '/etc/nginx/conf.d/:/etc/nginx/conf.d' ]
-  links ['transmission-server:transmission']
+  links ['docker-transmission:transmission']
 end
