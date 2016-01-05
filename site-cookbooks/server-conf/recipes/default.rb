@@ -40,6 +40,8 @@ docker_image 'dperson/transmission' do
   notifies :redeploy, 'docker_container[docker-transmission]'
 end
 
+# TODO dperson/transmission overwrites our mounted settings.json
+# Follow github.com/dperson/transmission/issues/12
 docker_container 'docker-transmission' do
   repo 'dperson/transmission'
   tag 'latest'
