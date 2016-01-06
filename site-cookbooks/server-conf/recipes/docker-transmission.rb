@@ -28,5 +28,5 @@ docker_container 'transmission' do
   port '9091:9091'
   host_name 'transmission'
   domain_name 'transmission.surenot.ml'
-  binds [ '/var/local/transmission/:/var/lib/transmission-daemon/.config/transmission-daemon/' ]
+  binds [ '/var/local/transmission/:/var/lib/transmission-daemon/info/' ]
 end
