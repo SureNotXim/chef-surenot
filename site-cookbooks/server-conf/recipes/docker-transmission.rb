@@ -16,16 +16,14 @@ cookbook_file "/etc/transmission-daemon/settings.json" do
   mode '0744'
 end
 
-docker_image 'dperson/transmission' do
+docker_image 'surenot/transmission' do
   tag 'latest'
   action :pull
   notifies :redeploy, 'docker_container[docker-transmission]'
 end
 
-# TODO dperson/transmission overwrites our mounted settings.json
-# Follow github.com/dperson/transmission/issues/12
 docker_container 'docker-transmission' do
-  repo 'dperson/transmission'
+  repo 'surenot/transmission'
   tag 'latest'
   port '9091:9091'
   host_name 'docker-transmission'
