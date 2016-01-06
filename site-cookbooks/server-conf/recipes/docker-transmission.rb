@@ -1,7 +1,7 @@
 # --------------------
 # Transmission setup
 # --------------------
-directory '/etc/transmission-daemon' do
+directory '/var/local/transmission' do
   recursive true
   owner 'root'
   group 'root'
@@ -9,7 +9,7 @@ directory '/etc/transmission-daemon' do
   action :create
 end
 
-cookbook_file "/etc/transmission-daemon/settings.json" do
+cookbook_file "/var/local/transmission/settings.json" do
   source 'transmission/settings.json'
   owner 'root'
   group 'root'
@@ -28,5 +28,5 @@ docker_container 'transmission' do
   port '9091:9091'
   host_name 'transmission'
   domain_name 'transmission.surenot.ml'
-  binds [ '/etc/transmission-daemon/:/var/lib/transmission-daemon/.config/transmission-daemon/' ]
+  binds [ '/var/local/transmission/:/var/lib/transmission-daemon/.config/transmission-daemon/' ]
 end

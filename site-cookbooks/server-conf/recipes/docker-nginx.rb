@@ -1,7 +1,7 @@
 # --------------------
 # nginx setup
 # --------------------
-directory '/etc/nginx/conf.d' do
+directory '/var/local/nginx/conf.d' do
   recursive true
   owner 'root'
   group 'root'
@@ -9,7 +9,7 @@ directory '/etc/nginx/conf.d' do
   action :create
 end
 
-cookbook_file "/etc/nginx/conf.d/default.conf" do
+cookbook_file "/var/local/nginx/conf.d/default.conf" do
   source 'nginx/default.conf'
   owner 'root'
   group 'root'
@@ -28,6 +28,6 @@ docker_container 'nginx' do
   port '80:80'
   host_name 'docker-nginx'
   domain_name 'surenot.ml'
-  binds [ '/etc/nginx/conf.d/:/etc/nginx/conf.d' ]
+  binds [ '/var/local/nginx/conf.d/:/etc/nginx/conf.d' ]
   links ['transmission:transmission']
 end
