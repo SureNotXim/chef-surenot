@@ -19,15 +19,15 @@ end
 docker_image 'nginx' do
   tag 'latest'
   action :pull
-  notifies :redeploy, 'docker_container[docker-nginx]'
+  notifies :redeploy, 'docker_container[nginx]'
 end
 
-docker_container 'docker-nginx' do
+docker_container 'nginx' do
   repo 'nginx'
   tag 'latest'
   port '80:80'
   host_name 'docker-nginx'
   domain_name 'surenot.ml'
   binds [ '/etc/nginx/conf.d/:/etc/nginx/conf.d' ]
-  links ['docker-transmission:transmission']
+  links ['transmission:transmission']
 end
