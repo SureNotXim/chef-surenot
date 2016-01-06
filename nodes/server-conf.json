@@ -1,5 +1,7 @@
 {
-    "run_list": [
-        "recipe[server-conf]"
-    ]
+  "run_list": [
+    "recipe[server-conf::default]",
+    "recipe[server-conf::docker-transmission]",
+    "recipe[server-conf::docker-nginx]"
+  ]
 }
